@@ -13,7 +13,7 @@
         <parameters/>
         <body>
             <declare name="Numeri" type="Real" array="False" size=""/>
-            <assign variable="Numeri" expression="1"/>
+            <assign variable="Numeri" expression="135"/>
             <declare name="Media" type="Real" array="False" size=""/>
             <declare name="Contatore" type="Real" array="False" size=""/>
             <assign variable="Contatore" expression="0"/>
