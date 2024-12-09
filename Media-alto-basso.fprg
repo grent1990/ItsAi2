@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Esercizio"/>
+        <attribute name="authors" value="grent"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-12-06 11:46:02 "/>
+        <attribute name="created" value="Z3JlbnQ7REVTS1RPUC1CTkczQkpJOzIwMjQtMTItMDI7IjA5OjQ1OjMyICI7Mjc5Nw=="/>
+        <attribute name="edited" value="Z3JlbnQ7REVTS1RPUC1CTkczQkpJOzIwMjQtMTItMDI7IjEwOjU4OjIwICI7MzsyOTAw"/>
+        <attribute name="edited" value="SVRTO0lUUy1QMDc7MjAyNC0xMi0wNjsiMTE6NDY6MDIgIjsxOzIwMDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Numeri" type="Real" array="False" size=""/>
+            <assign variable="Numeri" expression="1"/>
+            <declare name="Media" type="Real" array="False" size=""/>
+            <declare name="Contatore" type="Real" array="False" size=""/>
+            <assign variable="Contatore" expression="0"/>
+            <assign variable="Media" expression="0"/>
+            <declare name="haiNumeri" type="Boolean" array="False" size=""/>
+            <declare name="Alto" type="Real" array="False" size=""/>
+            <assign variable="Alto" expression="0"/>
+            <declare name="Basso" type="Real" array="False" size=""/>
+            <assign variable="Basso" expression="10^9"/>
+            <output expression="&quot;Vuoi inserire un numero?&quot;" newline="True"/>
+            <input variable="haiNumeri"/>
+            <if expression="haiNumeri=true">
+                <then>
+                    <while expression="haiNumeri=true">
+                        <output expression="&quot;Inserisci numero.&quot;" newline="True"/>
+                        <input variable="Contatore"/>
+                        <if expression="Contatore&gt;=Alto">
+                            <then>
+                                <assign variable="Alto" expression="Contatore"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <if expression="Contatore&lt;=Basso">
+                            <then>
+                                <assign variable="Basso" expression="Contatore"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <assign variable="Media" expression="Media+Contatore"/>
+                        <assign variable="Numeri" expression="Numeri+1"/>
+                        <output expression="&quot;Hai altri numeri da inserire?&quot;" newline="True"/>
+                        <input variable="haiNumeri"/>
+                    </while>
+                    <output expression="&quot;Hai inserito &quot; &amp; Numeri &amp; &quot; numeri.&quot;" newline="True"/>
+                    <output expression="&quot;La tua media &#232;: &quot; &amp; (Media/Numeri)" newline="True"/>
+                    <output expression="&quot;Il numero pi&#249; alto &#232;: &quot; &amp; Alto &amp; &quot; Il numero pi&#249; basso &#232;: &quot; &amp; Basso" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Se nel futuro dovessi avere dei numeri ripassa.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
